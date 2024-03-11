@@ -7,7 +7,7 @@
             Console.WriteLine("Welcome to Recipe Manager!");
             IngredientData data = new IngredientData();
             data.add("Rice", 2, "cup");
-            data.display(0);
+            data.display(1);
         }
     }
 }

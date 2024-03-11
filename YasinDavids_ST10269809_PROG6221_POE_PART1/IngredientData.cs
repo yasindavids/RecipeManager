@@ -31,9 +31,9 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 Console.Write(nameIngredient[i] + ", ");
                 Console.Write(amtIngredient[i] + ", ");
                 Console.WriteLine(unitIngredient[i]);
-            } catch (IndexOutOfRangeException ex)
+            } catch (ArgumentOutOfRangeException ex)
             {
-                Console.WriteLine("Error: list issue");
+                Console.WriteLine("Error: " + ex.Message);
             }
         }
     }
