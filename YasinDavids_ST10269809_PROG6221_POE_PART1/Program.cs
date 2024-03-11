@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Welcome to Recipe Manager!");
+            IngredientData data = new IngredientData();
+            data.add("Rice", 2, "cup");
+            data.display(0);
         }
     }
 }
