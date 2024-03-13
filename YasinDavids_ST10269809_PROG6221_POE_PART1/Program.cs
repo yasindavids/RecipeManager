@@ -5,9 +5,16 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Recipe Manager!");
-            IngredientData data = new IngredientData();
-            data.add("Rice", 2, "cup");
-            data.display(1);
+            IngredientData ingredient = new IngredientData();
+            RecipeData step = new RecipeData();
+            RecipeDisplay recipe = new RecipeDisplay();
+
+            ingredient.add("Rice", 2, "cup");
+            ingredient.display(0);
+            
+
+            recipe.display(0);
+
         }
     }
 }

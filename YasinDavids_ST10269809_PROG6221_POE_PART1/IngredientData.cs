@@ -9,7 +9,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
     internal class IngredientData
     {
         // Lists to store ingredient data
-        List<string> nameIngredient = new List<string>();
+        public List<string> nameIngredient = new List<string>();
         List<int> amtIngredient = new List<int>();
         List<string> unitIngredient = new List<string>();
 
@@ -28,9 +28,9 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
             //Prints lists if index is in range
             try
             {
-                Console.Write(nameIngredient[i] + ", ");
-                Console.Write(amtIngredient[i] + ", ");
-                Console.WriteLine(unitIngredient[i]);
+                Console.Write(amtIngredient[i] + " ");
+                Console.WriteLine(unitIngredient[i] + "s " + nameIngredient[i] + "\n");
+                
             } catch (ArgumentOutOfRangeException ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
