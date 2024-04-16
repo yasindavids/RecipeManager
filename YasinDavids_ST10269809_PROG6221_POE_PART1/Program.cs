@@ -7,7 +7,12 @@
             Console.WriteLine("Welcome to Recipe Manager!");
             //Instantiating menu class
             Menu menu = new Menu();
-            //Prints main menu
+            IngredientData data = new IngredientData();
+            RecipeDisplay blah = new RecipeDisplay();
+
+
+
+
             menu.print();
             menu.choose();
 

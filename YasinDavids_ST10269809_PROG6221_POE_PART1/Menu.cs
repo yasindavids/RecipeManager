@@ -8,6 +8,8 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
 {
     internal class Menu
     {
+        //instantiate AddRecipe class
+        AddRecipe add = new AddRecipe();
 
         //Prints menu
         public void print()
@@ -15,7 +17,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
             Console.WriteLine("Press: \n1) Add Recipe \n2) View Recipe");
         }
 
-// ----------------------------------------------------------------------------------------------------------//
+        // ----------------------------------------------------------------------------------------------------------//
 
         //Selects option from menu
         public void choose()
@@ -34,15 +36,16 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                     switch (input)
                     {
                         case 1:
-                            Console.WriteLine("1 chosen");
+                            add.addIngredients();
                             break;
-                            
+
                         case 2:
                             Console.WriteLine("2 chosen");
                             break;
                     }
-                 // Exceptions
-                } else
+                    // Exceptions
+                }
+                else
                 {
                     Console.WriteLine("Number not in range");
                 }
