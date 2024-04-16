@@ -15,8 +15,6 @@
                 // Calls choose method
                 menu.choose();
             }
-
-
         }
     }
 }

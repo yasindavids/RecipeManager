@@ -15,13 +15,13 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         //Declarations
         IngredientData iData = new IngredientData();
         RecipeData rData = new RecipeData();
-        //List of recipe names
-        List<string> displayName = new List<string>();
 
         // Method stores inputs to lists in RecipeData
         public void addSteps()
         {
+            // used for input later
             int stepNum = 0;
+            // used for various while loops
             bool conditionMet = false;
 
             while (!conditionMet)
@@ -186,8 +186,10 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         // Method takes in int and prints corresponding list elements
         public void displayIngredients(int scale)
         {
-
+            //Red coloured heading
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("-----------------------\n INGREDIENTS \n-----------------------");
+            Console.ResetColor();
             // Prints lists if index is in range
             for (int i = 0; i < iData.amtIngredient.Count; i++)
             {
@@ -208,9 +210,14 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
 
         // ----------------------------------------------------------------------------------------------------------//
 
+        //Method displays Recipe
         public void displayRecipe()
         {
+            //Red coloured heading
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("-----------------------\n RECIPE \n-----------------------");
+            Console.ResetColor();
+
             //Prints lists if index is in range
             for (int i = 0; i < rData.stepDescrip.Count; i++)
             {
@@ -225,6 +232,16 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 }
             }
 
+        }
+
+        //Erases all recipe/ingredient data 
+        public void erase()
+        {
+            // Clears all lists
+            iData.unitIngredient.Clear();
+            iData.amtIngredient.Clear();
+            iData.nameIngredient.Clear();
+            rData.stepDescrip.Clear();
         }
 
     }

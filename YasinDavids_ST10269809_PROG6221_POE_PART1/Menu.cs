@@ -18,7 +18,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         public void choose()
         {
             // Prints menu
-            Console.WriteLine("Press: \n1) Add Recipe \n2) View Recipe\n3) Quit Program");
+            Console.WriteLine("Press: \n1) Add Recipe (Will clear any previously entered recipe) \n2) View Recipe\n3) Quit Program");
 
             // Declarations
             string inputString = Console.ReadLine();
@@ -34,9 +34,10 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                     switch (input)
                     {
                         case 1:
-
+                            // Clears out lists and lets user enter
+                            recipe.erase();
                             Console.WriteLine("Enter name for recipe: ");
-                            string name = Console.ReadLine();
+                            // Calls addIngredient and addSteps methods
                             recipe.addIngredients();
                             recipe.addSteps();
                             break;
@@ -47,17 +48,23 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                             // Takes input to scale
                             
                             int scale = int.Parse(Console.ReadLine());
+                            //Scales the ingredients according to user choice
                             if (scale == 0.5 || scale == 1|| scale ==2 || scale == 3)
                             {
                                 recipe.displayIngredients(scale);
                                 recipe.displayRecipe();
-                                Console.WriteLine("\nDo you want to reset the scaling? Y for yes.");
-                                string input2 = Console.ReadLine();
-                                if (input2 == "Y" || input2 == "y")
+                                //gives option to reset scaling if not already 1
+                                if (scale != 1)
                                 {
-                                    recipe.displayIngredients(1);
-                                    recipe.displayRecipe();
+                                    Console.WriteLine("\nDo you want to reset the scaling? Y for yes.");
+                                    string input2 = Console.ReadLine();
+                                    if (input2 == "Y" || input2 == "y")
+                                    {
+                                        recipe.displayIngredients(1);
+                                        recipe.displayRecipe();
+                                    }
                                 }
+                                //Exception
                             } else { Console.WriteLine("Invalid number"); }
                             break;
                         case 3:
@@ -65,7 +72,6 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                             Environment.Exit(0);
                             break;
                     }
-
                 }
                 // Exceptions
                 else
