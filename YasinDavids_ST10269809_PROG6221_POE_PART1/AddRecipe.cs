@@ -184,7 +184,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         // ----------------------------------------------------------------------------------------------------------//
 
         // Method takes in int and prints corresponding list elements
-        public void displayIngredients(int scale)
+        public void displayIngredients(double scale)
         {
             //Red coloured heading
             Console.ForegroundColor = ConsoleColor.Red;
