@@ -5,15 +5,11 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Recipe Manager!");
-            IngredientData ingredient = new IngredientData();
-            RecipeData step = new RecipeData();
-            RecipeDisplay recipe = new RecipeDisplay();
-
-            ingredient.add("Rice", 2, "cup");
-            ingredient.display(0);
-            
-
-            recipe.display(0);
+            //Instantiating menu class
+            Menu menu = new Menu();
+            //Prints main menu
+            menu.print();
+            menu.choose();
 
         }
     }

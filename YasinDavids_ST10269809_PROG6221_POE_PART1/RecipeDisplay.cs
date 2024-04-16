@@ -8,9 +8,12 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
 {
     internal class RecipeDisplay
     {
+        // Declarations
         IngredientData ingredient = new IngredientData();
         RecipeData step = new RecipeData();
 
+        
+        //method to display ingredients
         public void display(int i)
         {
             try
