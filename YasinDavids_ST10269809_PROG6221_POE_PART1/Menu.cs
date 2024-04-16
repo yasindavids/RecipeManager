@@ -9,7 +9,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
     internal class Menu
     {
         //instantiate AddRecipe class
-        AddRecipe add = new AddRecipe();
+        AddRecipe recipe = new AddRecipe();
 
         //Prints menu
         public void print()
@@ -36,11 +36,11 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                     switch (input)
                     {
                         case 1:
+                            
                             Console.WriteLine("Enter name for recipe: ");
                             string name = Console.ReadLine();                           
-                            add.addIngredients();
-                            add.addSteps();
-                            add.createRecipe(name);
+                            recipe.addIngredients();
+                            recipe.addSteps();                               
                             break;
 
                         case 2:

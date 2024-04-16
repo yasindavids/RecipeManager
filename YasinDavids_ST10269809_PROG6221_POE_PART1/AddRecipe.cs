@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -12,6 +15,8 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         //Declarations
         IngredientData iData = new IngredientData();
         RecipeData rData = new RecipeData();
+        //List of recipe names
+        List<string> displayName = new List<string>();
 
         // Method stores inputs to lists in RecipeData
         public void addSteps()
@@ -41,10 +46,11 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 int step = j + 1;
                 string descrip = "";
 
-                Console.WriteLine("-------------------------------------------------\n ", ") Please enter details for step ", step, ":");
+                Console.WriteLine("-------------------------------------------------");
+                Console.WriteLine($"Please enter details for step {step}\n");
 
                 // Takes user input for step description
-                Console.WriteLine("Ingredient name:");
+                Console.WriteLine("Step "+ step + " Description:");
                 // reset conditionMet
                 conditionMet = false;
 
@@ -63,7 +69,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                         Console.WriteLine($"An error occurred: {ex.Message}");
                     }
                 }
-                rData.add(step, descrip);
+                rData.add(descrip);
             }
 
         }
@@ -102,7 +108,8 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 // reset conditionMet
                 conditionMet = false;
 
-                Console.WriteLine("-------------------------------------------------\n ", ingAmt, ") Please enter ingredient details: ");
+                Console.WriteLine("------------------------------------------------- ");
+                Console.WriteLine("Please enter ingredient details\n");
 
                 // Takes user input for ingredient name
                 Console.WriteLine("Ingredient name:");
@@ -169,35 +176,18 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
 
                 // Adds ingredients to list
                 iData.add(name, amount, unit);
+                Console.WriteLine("------------------------------------------------- ");
             }
          
         }
 
         // ----------------------------------------------------------------------------------------------------------//
 
-        //Method to create full recipe
-        public void createRecipe(string name)
+ 
+
+        public void displayRecipes()
         {
-            //Parralel 2D list to store ingredient data
-            List<List<int>> ingredientAmounts = new List<List<int>>();
-            List<List<string>> ingredientNames = new List<List<string>>();
-            List<List<string>> ingredientUnits = new List<List<string>>();
-
-            // Add instance of lists to 2D lists
-            ingredientAmounts.Add(iData.amtIngredient);
-            ingredientNames.Add(iData.nameIngredient);
-            ingredientUnits.Add(iData.unitIngredient);
-
-            //Parallel 2D list to store recipe data
-            List<List<string>> stepDescriptions = new List<List<string>>();
-            List<List<int>> stepNums = new List<List<int>>();
-
-            // Add instance of lists to 2d lists
-            stepDescriptions.Add(rData.stepDescrip);
-            stepNums.Add(rData.stepNum);
-
-
+         
         }
-
     }
 }

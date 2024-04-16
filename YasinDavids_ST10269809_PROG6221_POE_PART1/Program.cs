@@ -12,10 +12,11 @@
 
 
 
-
+            
             menu.print();
             menu.choose();
-            data.display(0);
+            
+
 
         }
     }

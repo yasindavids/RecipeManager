@@ -13,10 +13,8 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         public List<string> stepDescrip = new List<string>();
 
         //Method takes in step parameters saves it in memory to lists
-        public void add(int step, string descrip)
-        {
-            //Adds method argument to lists
-            stepNum.Add(step);
+        public void add(string descrip)
+        {           
             stepDescrip.Add(descrip);  
         }
 
