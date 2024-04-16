@@ -130,7 +130,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 }
 
                 // Takes user input for ingredient unit
-                Console.WriteLine("Unit ingredient is measured in (ie cups/tblspn):");
+                Console.WriteLine("Unit ingredient is measured in (ie cup/tblspn):");
 
                 // reset conditionMet
                 conditionMet = false;
@@ -176,7 +176,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
 
                 // Adds ingredients to list
                 iData.add(name, amount, unit);
-                Console.WriteLine("------------------------------------------------- ");
+                
             }
 
         }
@@ -224,7 +224,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 try
                 {
                     // Prints step
-                    Console.WriteLine((i + 1) + ". ", rData.stepDescrip[i]);
+                    Console.WriteLine((i + 1) + ". "+ rData.stepDescrip[i]);
                 }
                 catch (ArgumentOutOfRangeException ex)
                 {

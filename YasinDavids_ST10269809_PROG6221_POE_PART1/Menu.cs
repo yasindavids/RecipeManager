@@ -18,7 +18,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         public void choose()
         {
             // Prints menu
-            Console.WriteLine("Press: \n1) Add Recipe (Will clear any previously entered recipe) \n2) View Recipe\n3) Quit Program");
+            Console.WriteLine("\nPress: \n1) Add Recipe (Will clear any previously entered recipe) \n2) View Recipe\n3) Quit Program");
 
             // Declarations
             string inputString = Console.ReadLine();
