@@ -46,10 +46,10 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                             Console.WriteLine("Choose how you'd like to scale your recipe:");
                             Console.WriteLine("(0.5)\n(1)\n(2)\n(3)");
                             // Takes input to scale
-                            
+
                             int scale = int.Parse(Console.ReadLine());
                             //Scales the ingredients according to user choice
-                            if (scale == 0.5 || scale == 1|| scale ==2 || scale == 3)
+                            if (scale == 0.5 || scale == 1 || scale == 2 || scale == 3)
                             {
                                 recipe.displayIngredients(scale);
                                 recipe.displayRecipe();
@@ -65,7 +65,8 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                                     }
                                 }
                                 //Exception
-                            } else { Console.WriteLine("Invalid number"); }
+                            }
+                            else { Console.WriteLine("Invalid number"); }
                             break;
                         case 3:
                             // Exit the program

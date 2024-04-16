@@ -14,10 +14,10 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
 
         //Method takes in step parameters saves it in memory to lists
         public void add(string descrip)
-        {           
-            stepDescrip.Add(descrip);  
+        {
+            stepDescrip.Add(descrip);
         }
 
-       
+
     }
 }
