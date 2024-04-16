@@ -19,7 +19,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 Console.WriteLine(ingredient.nameIngredient.Count);
                 ingredient.display(i);
             } catch (ArgumentOutOfRangeException ex) { 
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message);    
             }
             
         }
