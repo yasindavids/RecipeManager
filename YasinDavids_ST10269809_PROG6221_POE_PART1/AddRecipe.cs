@@ -14,7 +14,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         RecipeData rData = new RecipeData();
 
         // Method stores inputs to lists in RecipeData
-        public void addRecipe()
+        public void addSteps()
         {
             int stepNum = 0;
             bool conditionMet = false;
@@ -170,6 +170,34 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 // Adds ingredients to list
                 iData.add(name, amount, unit);
             }
+         
         }
+
+        // ----------------------------------------------------------------------------------------------------------//
+
+        //Method to create full recipe
+        public void createRecipe(string name)
+        {
+            //Parralel 2D list to store ingredient data
+            List<List<int>> ingredientAmounts = new List<List<int>>();
+            List<List<string>> ingredientNames = new List<List<string>>();
+            List<List<string>> ingredientUnits = new List<List<string>>();
+
+            // Add instance of lists to 2D lists
+            ingredientAmounts.Add(iData.amtIngredient);
+            ingredientNames.Add(iData.nameIngredient);
+            ingredientUnits.Add(iData.unitIngredient);
+
+            //Parallel 2D list to store recipe data
+            List<List<string>> stepDescriptions = new List<List<string>>();
+            List<List<int>> stepNums = new List<List<int>>();
+
+            // Add instance of lists to 2d lists
+            stepDescriptions.Add(rData.stepDescrip);
+            stepNums.Add(rData.stepNum);
+
+
+        }
+
     }
 }

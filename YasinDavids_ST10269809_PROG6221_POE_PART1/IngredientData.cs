@@ -10,8 +10,8 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
     {
         // Lists to store ingredient data
         public List<string> nameIngredient = new List<string>();
-        List<int> amtIngredient = new List<int>();
-        List<string> unitIngredient = new List<string>();
+        public List<int> amtIngredient = new List<int>();
+        public List<string> unitIngredient = new List<string>();
 
         // Method takes in ingredient parameters and saves it in memory to lists
         public void add(string name, int amount, string unit)
