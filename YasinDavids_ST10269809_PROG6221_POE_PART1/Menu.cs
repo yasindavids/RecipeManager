@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         public void choose()
         {
             // Prints menu
-            Console.WriteLine("Press: \n1) Add Recipe \n2) View Recipe");
+            Console.WriteLine("Press: \n1) Add Recipe \n2) View Recipe\n3) Quit Program");
 
             // Declarations
             string inputString = Console.ReadLine();
@@ -28,7 +29,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
             {
                 input = int.Parse(inputString);
 
-                if (input == 1 || input == 2)
+                if (input == 1 || input == 2 || input == 3)
                 {
                     switch (input)
                     {
@@ -49,9 +50,19 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                             if (scale == 0.5 || scale == 1|| scale ==2 || scale == 3)
                             {
                                 recipe.displayIngredients(scale);
+                                recipe.displayRecipe();
+                                Console.WriteLine("\nDo you want to reset the scaling? Y for yes.");
+                                string input2 = Console.ReadLine();
+                                if (input2 == "Y" || input2 == "y")
+                                {
+                                    recipe.displayIngredients(1);
+                                    recipe.displayRecipe();
+                                }
                             } else { Console.WriteLine("Invalid number"); }
-                            
-
+                            break;
+                        case 3:
+                            // Exit the program
+                            Environment.Exit(0);
                             break;
                     }
 

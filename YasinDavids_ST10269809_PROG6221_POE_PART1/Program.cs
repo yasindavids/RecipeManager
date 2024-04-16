@@ -7,11 +7,12 @@
             Console.WriteLine("Welcome to Recipe Manager!");
             //Instantiating menu class
             Menu menu = new Menu();
-            IngredientData data = new IngredientData();
-            RecipeDisplay blah = new RecipeDisplay();
-            Boolean run = true;
+
+            // While loop to run indefinitely until user exits
+            bool run = true;
             while (run)
             {
+                // Calls choose method
                 menu.choose();
             }
 

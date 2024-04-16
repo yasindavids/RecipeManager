@@ -216,8 +216,8 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
             {
                 try
                 {
-                    Console.Write(rData.stepNum[i] + ". ");
-                    Console.WriteLine(rData.stepDescrip[i]);
+                    // Prints step
+                    Console.WriteLine((i + 1) + ". ", rData.stepDescrip[i]);
                 }
                 catch (ArgumentOutOfRangeException ex)
                 {
