@@ -50,7 +50,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 Console.WriteLine($"Please enter details for step {step}\n");
 
                 // Takes user input for step description
-                Console.WriteLine("Step "+ step + " Description:");
+                Console.WriteLine("Step " + step + " Description:");
                 // reset conditionMet
                 conditionMet = false;
 
@@ -131,7 +131,7 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
 
                 // Takes user input for ingredient unit
                 Console.WriteLine("Unit ingredient is measured in (ie cups/tblspn):");
-               
+
                 // reset conditionMet
                 conditionMet = false;
                 while (!conditionMet)
@@ -178,16 +178,54 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
                 iData.add(name, amount, unit);
                 Console.WriteLine("------------------------------------------------- ");
             }
-         
+
         }
 
         // ----------------------------------------------------------------------------------------------------------//
 
- 
-
-        public void displayRecipes()
+        // Method takes in int and prints corresponding list elements
+        public void displayIngredients(int scale)
         {
-         
+
+            Console.WriteLine("-----------------------\n INGREDIENTS \n-----------------------");
+            // Prints lists if index is in range
+            for (int i = 0; i < iData.amtIngredient.Count; i++)
+            {
+                try
+                {
+
+                    Console.Write((iData.amtIngredient[i] * scale) + " ");
+                    Console.WriteLine(iData.unitIngredient[i] + "s " + iData.nameIngredient[i] + "\n");
+
+                }
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
         }
+
+        // ----------------------------------------------------------------------------------------------------------//
+
+        public void displayRecipe()
+        {
+            Console.WriteLine("-----------------------\n RECIPE \n-----------------------");
+            //Prints lists if index is in range
+            for (int i = 0; i < rData.stepDescrip.Count; i++)
+            {
+                try
+                {
+                    Console.Write(rData.stepNum[i] + ". ");
+                    Console.WriteLine(rData.stepDescrip[i]);
+                }
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+        }
+
     }
 }

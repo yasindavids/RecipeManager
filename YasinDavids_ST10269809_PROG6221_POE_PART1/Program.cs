@@ -9,13 +9,11 @@
             Menu menu = new Menu();
             IngredientData data = new IngredientData();
             RecipeDisplay blah = new RecipeDisplay();
-
-
-
-            
-            menu.print();
-            menu.choose();
-            
+            Boolean run = true;
+            while (run)
+            {
+                menu.choose();
+            }
 
 
         }

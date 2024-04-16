@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,24 +19,11 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
         public void add(string name, int amount, string unit)
         {
             //Adds method argument to lists          
-                nameIngredient.Add(name);
-                amtIngredient.Add(amount);
-                unitIngredient.Add(unit);         
+            nameIngredient.Add(name);
+            amtIngredient.Add(amount);
+            unitIngredient.Add(unit);
         }
 
-        // Method takes in int and prints corresponding list elements
-        public void display(int i)
-        {
-            //Prints lists if index is in range
-            try
-            {
-                Console.Write(amtIngredient[i] + " ");
-                Console.WriteLine(unitIngredient[i] + "s " + nameIngredient[i] + "\n");
-                
-            } catch (ArgumentOutOfRangeException ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-        }
+        
     }
 }

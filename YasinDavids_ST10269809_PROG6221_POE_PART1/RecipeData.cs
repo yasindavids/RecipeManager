@@ -18,18 +18,6 @@ namespace YasinDavids_ST10269809_PROG6221_POE_PART1
             stepDescrip.Add(descrip);  
         }
 
-        public void display(int i)
-        {
-            //Prints lists if index is in range
-            try
-            {
-                Console.Write(stepNum[i] + ". ");
-                Console.WriteLine(stepDescrip[i]);
-            }
-            catch (ArgumentOutOfRangeException ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-        }
+       
     }
 }
